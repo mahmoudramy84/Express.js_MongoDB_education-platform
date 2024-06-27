@@ -36,58 +36,58 @@ My Education Platform is an online platform that offers educational tracks in th
 
 ### Installation
 
-## Installation
-
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/my-education-platform.git
-   cd my-education-platform
+   git clone https://github.com/mahmoudramy84/Express.js_MongoDB_education-platform.git
+   cd Express.js_MongoDB_education-platform
 
-## Installation
-
-1. Install dependencies:
+2. Install dependencies:
 
    ```bash
    npm install
-Set up MongoDB:
 
-If you are using MongoDB locally, make sure it's running on mongodb://localhost:27017.
-If you are using MongoDB Atlas, update the connection string in server.js.
-Running the Application
-Start the server:
+3. Set up MongoDB:
 
-bash
-Copy code
-node server.js
-The server will be running on http://localhost:3000.
+- If you are using MongoDB locally, make sure it's running on mongodb://localhost:27017.
+- If you are using MongoDB Atlas, update the connection string in server.js.
 
-API Endpoints
-Users
-GET /users
-Get all users.
-POST /users
-Create a new user.
-Courses
-GET /courses
-Get all courses.
-POST /courses
-Create a new course.
-Tracks
-GET /tracks
-Get all tracks.
-POST /tracks
-Create a new track.
-Lessons
-GET /lessons/course/:courseId
-Get all lessons for a specific course.
-POST /lessons
-Create a new lesson.
-Progress
-GET /progress/:userId
-Get progress for a user.
-PUT /progress/:userId
-Update progress for a user.
-Additional Tips
-Agile Methodology: Consider using agile practices like Scrum or Kanban for project management.
-Collaboration Tools: Utilize tools like Slack, Jira, or Trello for team collaboration and project tracking.
+## Running the Application
+
+1. Start the server:
+
+   ```bash
+   node server.js
+
+2. The server will be running on http://localhost:3000.
+
+### API Endpoints
+
+## Users
+- GET /users
+    - Get all users.
+
+- POST /users
+    - Create a new user.
+
+## Courses
+- GET /courses
+    - Get all courses.
+- POST /courses
+    - Create a new course.
+
+## Tracks
+- GET /tracks
+    - Get all tracks.
+- POST /tracks
+    - Create a new track.
+
+## Lessons
+- GET /lessons/course/:courseId
+    - Get all lessons for a specific course.
+- POST /lessons
+    - Create a new lesson.
+
+## Additional Tips
+- Agile Methodology: Consider using agile practices like Scrum or Kanban for project management.
+- Collaboration Tools: Utilize tools like Slack, Jira, or Trello for team collaboration and project tracking.
