@@ -36,16 +36,20 @@ My Education Platform is an online platform that offers educational tracks in th
 
 ### Installation
 
+## Installation
+
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/your-username/my-education-platform.git
    cd my-education-platform
-Install dependencies:
 
-bash
-Copy code
-npm install
+## Installation
+
+1. Install dependencies:
+
+   ```bash
+   npm install
 Set up MongoDB:
 
 If you are using MongoDB locally, make sure it's running on mongodb://localhost:27017.
