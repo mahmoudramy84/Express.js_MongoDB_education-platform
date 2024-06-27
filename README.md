@@ -1,4 +1,4 @@
-# My Education Platform
+# Edu-City Platform
 
 My Education Platform is an online platform that offers educational tracks in the field of IT. Each track consists of a series of courses, and each course contains a series of lessons. The platform helps students identify the appropriate track, follow all the courses within the track in the correct order, and receive continuous guidance and interaction to ensure mastery of the material.
 
