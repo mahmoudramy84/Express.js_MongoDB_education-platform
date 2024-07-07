@@ -1,28 +1,26 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const userRoutes = require('./routes/users');
 const trackRoutes = require('./routes/tracks');
 const courseRoutes = require('./routes/courses');
 const lessonRoutes = require('./routes/lessons');
 
-
-
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/myEducationPlatform', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-    console.log('Connected to MongoDB');
-});
+dotenv.config();
 
 // Middleware
 app.use(express.json());
+
+// MongoDB connection
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error(err));
+
 
 // Routes
 app.use('/users', userRoutes);
