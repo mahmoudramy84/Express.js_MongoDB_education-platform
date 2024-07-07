@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 const userRoutes = require('./routes/users');
@@ -12,6 +13,13 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
+
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
