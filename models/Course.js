@@ -9,11 +9,14 @@ const courseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    track: { type: mongoose.Schema.Types.ObjectId, ref: 'Track' },
+    track: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Track'
+    },
     lessons: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Lesson',
-        required: true
+        // required: true
     }
 });
 

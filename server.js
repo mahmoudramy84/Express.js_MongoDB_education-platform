@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const morgan = require('morgan');
 const app = express();
 const port = process.env.PORT || 3000;
 const userRoutes = require('./routes/users');
@@ -13,6 +14,7 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
+app.use(morgan('dev'));
 
 const corsOptions = {
     origin: 'http://localhost:3000',
@@ -22,13 +24,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
-}).then(() => {
+const mongoURI = process.env.MONGO_URI;
+
+mongoose.connect(mongoURI).then(() => {
     console.log('MongoDB connected');
 }).catch(err => {
     console.error('Failed to connect to MongoDB', err);
 });
-
 
 // Routes
 app.use('/users', userRoutes);
