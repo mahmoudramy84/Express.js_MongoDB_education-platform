@@ -92,6 +92,38 @@ GET /courses
     ...
 ]
 
+Get All Lessons by Course ID
+Endpoint: GET /lessons/course/:courseId
+
+Description: Retrieves all lessons that belong to a specific course.
+
+Parameters:
+
+courseId (string, path): The ID of the course.
+Responses:
+
+200 OK: Successfully retrieved the list of lessons.
+
+Body: An array of lesson objects.
+
+json
+[
+    {
+        "_id": "60c72b2f5f1b2c001c8e4f1c",
+        "title": "Lesson 1",
+        "video": "http://example.com/video.mp4",
+        "course": "60c72b2f5f1b2c001c8e4f1b",
+        "__v": 0
+    },
+    {
+        "_id": "60c72b2f5f1b2c001c8e4f1d",
+        "title": "Lesson 2",
+        "video": "http://example.com/video2.mp4",
+        "course": "60c72b2f5f1b2c001c8e4f1b",
+        "__v": 0
+    }
+]
+
 Get Course by ID
 
 GET /courses/:id
