@@ -21,6 +21,16 @@ exports.getLessonById = async (req, res) => {
     }
 };
 
+// Get lessons by course ID
+exports.getLessonsByCourseId = async (req, res) => {
+    try {
+        const lessons = await Lesson.find({ course: req.params.courseId });
+        res.json(lessons);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
+
 // Create a new lesson
 exports.createLesson = async (req, res) => {
     const lesson = new Lesson(req.body);

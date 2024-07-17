@@ -5,11 +5,15 @@ const {
     getLessonById,
     createLesson,
     updateLesson,
-    deleteLesson
+    deleteLesson,
+    getLessonsByCourseId
 } = require('../controllers/lessonController');
 
 // Get all lessons
 router.get('/', getAllLessons);
+
+// Get lessons by course ID
+router.get('/course/:courseId', getLessonsByCourseId);
 
 // Get lesson by ID
 router.get('/:id', getLessonById);
