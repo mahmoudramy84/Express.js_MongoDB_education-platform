@@ -10,6 +10,16 @@ exports.getAllCourses = async (req, res) => {
     }
 };
 
+// Get courses by track ID
+exports.getCoursesByTrackId = async (req, res) => {
+    try {
+        const courses = await Course.find({ track: req.params.trackId });
+        res.json(courses);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
+
 // Get course by ID
 exports.getCourseById = async (req, res) => {
     try {

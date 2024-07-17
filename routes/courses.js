@@ -5,11 +5,15 @@ const {
     getCourseById,
     createCourse,
     updateCourse,
-    deleteCourse
+    deleteCourse,
+    getCoursesByTrackId
 } = require('../controllers/courseController');
 
 // Get all courses
 router.get('/', getAllCourses);
+
+// Get courses by track ID
+router.get('/track/:trackId', getCoursesByTrackId);
 
 // Get course by ID
 router.get('/:id', getCourseById);
