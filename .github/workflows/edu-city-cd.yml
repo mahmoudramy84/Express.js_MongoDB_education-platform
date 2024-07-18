@@ -24,9 +24,9 @@ jobs:
     - name: Deploy to EC2
       run: |
         ssh -o StrictHostKeyChecking=no -i /tmp/private-key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
-          docker pull melbehery/edu-city-backend
-          docker stop edu-city || true
-          docker rm edu-city || true
-          docker run -d --name edu-city --env MONGO_URI=${{ secrets.MONGO_URI }} -p 3000:3000 melbehery/edu-city-backend
+          sudo docker pull melbehery/edu-city-backend
+          sudo docker stop edu-city || true
+          sudo docker rm edu-city || true
+          sudo docker run -d --name edu-city -p 3000:3000 melbehery/edu-city-backend
         EOF
       shell: bash
