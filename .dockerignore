@@ -1,0 +1,10 @@
+Dockerfile
+.gitignore
+.git
+README.md
+node_modules
+cleanup.sh
+rebuild.sh
+playbook.yml
+package-lock
+Scripts

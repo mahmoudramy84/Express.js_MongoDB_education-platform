@@ -24,3 +24,4 @@
 
     - name: run container from image
       command: docker run -d --name edu-city -p 5000:5000 edu-city-backend
+

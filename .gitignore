@@ -1,0 +1,8 @@
+Edu-City-setup.sh
+.env
+node_modules/
+venv/
+cleanup.sh
+rebuild.sh
+deploy.yml
+Scripts

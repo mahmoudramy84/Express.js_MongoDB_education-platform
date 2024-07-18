@@ -40,13 +40,3 @@ jobs:
       run: |
         docker build -t melbehery/edu-city-backend .
         docker push melbehery/edu-city-backend
-
-    # Step 6: Install Ansible
-    - name: Install Ansible
-      run: sudo apt-get update && sudo apt-get install -y ansible
-
-    # Step 7: Run Ansible playbook
-    - name: Run Ansible playbook
-      run: ansible-playbook deploy.yml
-      env:
-        ANSIBLE_HOST_KEY_CHECKING: "false"
