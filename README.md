@@ -92,7 +92,7 @@ GET /courses
     ...
 ]
 
-Get All Lessons by Course ID
+#### Get All Lessons by Course ID
 Endpoint: GET /lessons/course/:courseId
 
 Description: Retrieves all lessons that belong to a specific course.
