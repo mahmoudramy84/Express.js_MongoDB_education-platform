@@ -5,7 +5,6 @@ const cors = require('cors');
 const morgan = require('morgan');
 const app = express();
 const port = process.env.PORT || 3000;
-const userRoutes = require('./routes/users');
 const trackRoutes = require('./routes/tracks');
 const courseRoutes = require('./routes/courses');
 const lessonRoutes = require('./routes/lessons');
@@ -33,7 +32,6 @@ mongoose.connect(mongoURI).then(() => {
 });
 
 // Routes
-app.use('/users', userRoutes);
 app.use('/tracks', trackRoutes);
 app.use('/courses', courseRoutes);
 app.use('/lessons', lessonRoutes);
