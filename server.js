@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 const corsOptions = {
-    origin: 'https://safeya-yasien.github.io,
+    origin: 'https://safeya-yasien.github.io',
     optionsSuccessStatus: 200
 };
 
