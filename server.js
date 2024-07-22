@@ -15,12 +15,12 @@ dotenv.config();
 app.use(express.json());
 app.use(morgan('dev'));
 
-const corsOptions = {
+/* const corsOptions = {
     origin: 'https://safeya-yasien.github.io',
     optionsSuccessStatus: 200
 };
-
-app.use(cors(corsOptions));
+*/
+app.use(cors());
 
 // MongoDB connection
 const mongoURI = process.env.MONGO_URI;
